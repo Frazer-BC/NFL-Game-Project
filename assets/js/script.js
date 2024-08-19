@@ -127,6 +127,7 @@ const answerEls = document.querySelectorAll(".answer-text");
 const downEl = document.getElementById("down");
 const timeHeadingEl = document.querySelector("#time-heading span");
 const yardageHeadingEl = document.querySelector("#yardage-heading span");
+const fieldDisplayImg = document.querySelector("#field-display img");
 
 let currentQuiz = 0;
 let score = 0;
@@ -161,6 +162,7 @@ function resetAnswers() {
             answerEl.classList.add("correct");
             score += 10;
             down = 1;
+            updateFieldImage(score);
         } else {
             answerEl.classList.add("incorrect");
             down++;
@@ -192,6 +194,13 @@ function resetAnswers() {
   });
   });
 
+  // change the display image to match score
+  function updateFieldImage(yardage) {
+    const imageFileName = `assets/images/fieldtest${yardage}.png`;
+    fieldDisplayImg.src = imageFileName;
+  }
+
+  // game over modal
   function gameOver() {
     const modal = document.createElement("div");
     modal.className = "modal";
