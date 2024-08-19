@@ -164,8 +164,8 @@ function resetAnswers() {
         }
         // display downs and yardage
           yardageHeadingEl.innerText = score;  
-          const suffixes = ["st", "nd", "rd", "th"];
-          const nth = suffixes[down];
+          const suffixes = ["th", "st", "nd", "rd"];
+          const nth = suffixes[down] || "th";
          downEl.innerText = `${down}${nth}`;
   
          // Check if game over by downs
