@@ -131,6 +131,9 @@ const yardageHeadingEl = document.querySelector("#yardage-heading span");
 let currentQuiz = 0;
 let score = 0;
 let down = 1;
+let remainingQuestions = 15;
+
+timeHeadingEl.innerText = remainingQuestions;
 
 loadQuiz();
 
@@ -162,15 +165,19 @@ function resetAnswers() {
             answerEl.classList.add("incorrect");
             down++;
         }
-        // display downs and yardage
+        // display downs, yardage and time left
           yardageHeadingEl.innerText = score;  
           const suffixes = ["th", "st", "nd", "rd"];
           const nth = suffixes[down] || "th";
          downEl.innerText = `${down}${nth}`;
+         remainingQuestions--;
+         timeHeadingEl.innerText = remainingQuestions;
   
          // Check if game over by downs
          if (down > 4) {
           gameOver();
+         } else if(remainingQuestions <= 0) {
+            gameOver();
       } else {
           // question time delay
           setTimeout(() => {
