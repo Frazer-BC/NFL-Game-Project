@@ -57,7 +57,7 @@ const quizData = [
     },
     {
         question: "Who holds the record for most career touchdowns?",
-        a: "Emmit Smith",
+        a: "Emmitt Smith",
         b: "Jim Brown",
         c: "Don Hutson",
         d: "Jerry Rice",
@@ -228,3 +228,58 @@ function showStartModal() {
 
 // Show start modal when page loads
 window.onload = showStartModal;
+
+// Show options modal when options is clicked
+const optionsMenu = document.getElementById("options-menu");
+optionsMenu.addEventListener("click", showOptionsModal);
+
+
+// the options modal
+function showOptionsModal() {
+    const modal = document.createElement("div");
+    modal.className = "modal";
+    const modalContent = document.createElement("div");
+    modalContent.className = "modal-content";
+    modalContent.innerHTML = `
+        <h1>Options</h1>
+        <button class="start" id="restart">Restart</button>
+        <br>
+        <button class="start" id="check-rules">Check Rules</button>
+    `;
+    modal.appendChild(modalContent);
+    document.body.appendChild(modal);
+
+    const restartButton = document.getElementById("restart");
+    const checkRulesButton = document.getElementById("check-rules");
+
+    restartButton.addEventListener("click", () => {
+        location.reload();
+    });
+
+    checkRulesButton.addEventListener("click", () => {
+        modal.style.display = "none";
+        showRulesModal();
+    });
+}
+
+// the check rules modal
+function showRulesModal() {
+    const modal = document.createElement("div");
+    modal.className = "modal";
+    const modalContent = document.createElement("div");
+    modalContent.className = "modal-content";
+    modalContent.innerHTML = `
+        <h1>Game Rules</h1>
+        <p>Answer the questions below to advance across the field. Starting from your own end zone, you have 4 downs (attempts) to move the ball 10 yards down the field. Every correct answer earns you 10 yards and 4 more downs (attempts) to get the next 10 yards.</p>
+        <p>To win the game, move the ball 100 yards into the opponents end zone by answering 10 questions correctly, but be aware, there's only enough time for 15 plays (questions)!</p>
+        <p>If you fail 4 questions in a row, the ball is turned over to the other team and it's game over!</p>
+        <button class="start" id="close-rules">Ok, got it!</button>
+    `;
+    modal.appendChild(modalContent);
+    document.body.appendChild(modal);
+
+    const closeRulesButton = document.getElementById("close-rules");
+    closeRulesButton.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+}
