@@ -221,7 +221,8 @@ function showStartModal() {
 
     const playNowButton = document.getElementById("play-now");
     playNowButton.addEventListener("click", () => {
-        modal.style.display = "none";
+        // modal.style.display = "none";
+        document.body.removeChild(modal);
         loadQuiz();
     });
 }
@@ -257,7 +258,9 @@ function showOptionsModal() {
     });
 
     checkRulesButton.addEventListener("click", () => {
-        modal.style.display = "none";
+        // modal.style.display = "none";
+        document.body.removeChild(modal);
+
         showRulesModal();
     });
 }
@@ -280,6 +283,7 @@ function showRulesModal() {
 
     const closeRulesButton = document.getElementById("close-rules");
     closeRulesButton.addEventListener("click", () => {
-        modal.style.display = "none";
+        // modal.style.display = "none";
+        document.body.removeChild(modal);
     });
 }
