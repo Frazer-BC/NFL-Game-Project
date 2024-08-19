@@ -150,3 +150,37 @@ function resetAnswers() {
         answerEl.classList.remove("correct", "incorrect");
     });
   }
+
+  answerEls.forEach(answerEl => {
+    answerEl.addEventListener("click", () => {
+        const selectedAnswer = answerEl.getAttribute("id");
+        if (selectedAnswer === quizData[currentQuiz].correct) {
+            answerEl.classList.add("correct");
+            score += 10;
+            down = 1;
+        } else {
+            answerEl.classList.add("incorrect");
+            down++;
+        }
+        // display downs and yardage
+          yardageHeadingEl.innerText = score;  
+          const suffixes = ["st", "nd", "rd", "th"];
+          const nth = suffixes[down];
+         downEl.innerText = `${down}${nth}`;
+  
+         // Check if game over by downs
+         if (down > 4) {
+          gameOver();
+      } else {
+          // question time delay
+          setTimeout(() => {
+              currentQuiz++;
+              if (currentQuiz < quizData.length) {
+                  loadQuiz();
+              } else {
+                  finishQuiz();
+              }
+          }, 1000);
+      }
+  });
+  });
