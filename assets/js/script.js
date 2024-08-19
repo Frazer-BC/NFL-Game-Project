@@ -121,3 +121,32 @@ const quizData = [
     }
   ];
   
+  
+const questionEl = document.getElementById("question");
+const answerEls = document.querySelectorAll(".answer-text");
+const downEl = document.getElementById("down");
+const timeHeadingEl = document.querySelector("#time-heading span");
+const yardageHeadingEl = document.querySelector("#yardage-heading span");
+
+let currentQuiz = 0;
+let score = 0;
+let down = 1;
+
+loadQuiz();
+
+function loadQuiz() {
+  resetAnswers();
+  const currentQuizData = quizData[currentQuiz];
+
+  questionEl.innerText = currentQuizData.question;
+  answerEls[0].innerText = currentQuizData.a;
+  answerEls[1].innerText = currentQuizData.b;
+  answerEls[2].innerText = currentQuizData.c;
+  answerEls[3].innerText = currentQuizData.d;
+}
+
+function resetAnswers() {
+    answerEls.forEach(answerEl => {
+        answerEl.classList.remove("correct", "incorrect");
+    });
+  }
