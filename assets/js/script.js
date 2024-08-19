@@ -178,9 +178,21 @@ function resetAnswers() {
               if (currentQuiz < quizData.length) {
                   loadQuiz();
               } else {
-                  finishQuiz();
+                  gameOver();
               }
           }, 1000);
       }
   });
   });
+
+  function gameOver() {
+    const modal = document.createElement("div");
+    modal.className = "modal";
+    const modalContent = document.createElement("div");
+    modalContent.className = "modal-content";
+    modalContent.innerHTML = `<h2>Game Over!</h2>
+                              <h3>Your Total Yardage: ${score} yards</h3>
+                              <button class="start" onclick="location.reload()">Play Again</button>`;
+    modal.appendChild(modalContent);
+    document.body.appendChild(modal);
+}
