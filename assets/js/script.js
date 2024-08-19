@@ -174,10 +174,10 @@ function resetAnswers() {
          timeHeadingEl.innerText = remainingQuestions;
   
          // Check if game over by downs
-         if (down > 4) {
+         if (down > 4 || remainingQuestions <= 0 || score >= 100) {
           gameOver();
-         } else if(remainingQuestions <= 0) {
-            gameOver();
+        //  } else if(remainingQuestions <= 0) {
+        //     gameOver();
       } else {
           // question time delay
           setTimeout(() => {
