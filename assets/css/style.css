@@ -31,8 +31,16 @@ body {
     margin-left: 3%;
 }
 
+.fa-clock {
+    margin-right: 0.5rem;
+}
+
 #yardage-heading {
     margin-right: 3%;
+}
+
+.fa-football {
+    margin-left: 0.5rem;
 }
 
 #field-display {
