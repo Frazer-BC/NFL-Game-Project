@@ -9,15 +9,16 @@
 </head>
 <body>
     <div id="time-and-score-display">
-        <h1 id="game-title">NFL Trivia Game</h1>
-        <h2 id="time-heading"><i class="fa-regular fa-clock"></i> Time left for <span>15</span> more play<span>s</span></h2>
-        <h2 id="yardage-heading">Total Yardage: <span>0</span> yards <i class="fa-solid fa-football"></i></h2>
+        <h1 id="game-title" class="hide-small-screen" >NFL Trivia Game</h1>
+        <h2 id="time-heading"><i class="fa-regular fa-clock"></i><span class="hide-small-screen">Time left for </span><span id="time-left">15</span> more play<span>s</span></h2>
+        <h2 id="yardage-heading"><span class="hide-small-screen">Total Yardage: </span><span id="yards">0</span> yards <i class="fa-solid fa-football"></i></h2>
     </div>
     <div id="field-display">
         <div id="options-menu">
             <h2>Options</h2>
         </div>
         <img src="assets/images/fieldtest0.png" alt="playing field starting point" class="field-picture">
+        <!-- <img src="assets/images/littlefieldtest0.png" alt="playing field starting point" class="hide-large-screen"> -->
         <div id="downs-display">
             <h2><span id="down">1st</span> Down</h2>
         </div>

@@ -51,6 +51,7 @@ body {
 
 #time-and-score-display {
     height: 60px;
+    min-width: 90%;
     background-color:#d50a0a;
     border-radius: 25px;
     display: flex;
@@ -184,4 +185,77 @@ button:hover {
 
 .hidden {
     display: none;
+}
+
+/* .hide-large-screen {
+    display: none;
+} */
+
+/* Phone screens  */
+@media screen and (max-width: 426px) {
+    .hide-small-screen{
+       display: none;
+    }
+
+    #time-heading {
+        font-size: 1.5rem;
+        order: 1;
+    }
+    
+    #yardage-heading {
+        font-size: 1.5rem;
+        order: 2;
+    }
+
+    /* .hide-large-screen {
+        display: block;
+    } */
+
+    .modal {
+        position: absolute;
+        width: 100vw;
+    }
+
+    
+    #answer-area {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .field-picture {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    #field-display {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .hide-small-screen{
+        display: none;
+     }
+
+     .field-picture {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    #field-display {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 }

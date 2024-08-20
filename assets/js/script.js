@@ -125,8 +125,8 @@ const quizData = [
 const questionEl = document.getElementById("question");
 const answerEls = document.querySelectorAll(".answer-text");
 const downEl = document.getElementById("down");
-const timeHeadingEl = document.querySelector("#time-heading span");
-const yardageHeadingEl = document.querySelector("#yardage-heading span");
+const timeHeadingEl = document.getElementById("time-left");
+const yardageHeadingEl = document.getElementById("yards");
 const fieldDisplayImg = document.querySelector("#field-display img");
 
 let currentQuiz = 0;
@@ -197,7 +197,7 @@ function resetAnswers() {
   // change the display image to match score
   function updateFieldImage(yardage) {
     const imageFileName = `assets/images/fieldtest${yardage}.png`;
-    fieldDisplayImg.src = imageFileName;
+   fieldDisplayImg.src = imageFileName;
   }
 
   // game over modal
