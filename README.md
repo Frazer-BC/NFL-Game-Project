@@ -13,14 +13,14 @@ This Website is a single webpage built with HTML, CSS and Javascript. It's a nic
 
 ## User Experience (UX)
 
--   ### User stories
+### User stories
 
--   #### A. New User Goals
+#### A. New User Goals
 
 1. As a new user I can quickly see what the theme of this quiz is from the design so that I can determine whether I will enjoy the content.
 2. As a new user I can easily access information regarding the rules of the game so that I understand how to play it.
 
--   #### B. General User Goals
+#### B. General User Goals
 
 1. As a user I can play through the game so that I can see my score at the end.
 2. As a user I can feel challenged by this game so that it isn't boring.
@@ -30,43 +30,43 @@ This Website is a single webpage built with HTML, CSS and Javascript. It's a nic
 
 ### Existing Features
 
--  #### Quiz area
+#### Quiz area
 
 - The quiz area is the primary user interface on the webpage. The features at the top reflect changes the user makes, but this section is where the user will interact with the game directly by inputting their answers. There are 15 questions in total, although if the player is knowlegeable or lucky, they may win the game with just 10 questions. There are 4 answer buttons which react when hovered over by the user, and will turn green if the correct answer is selected, or red if a wrong answer is selected. The user will have time to see these effects before the next question is loaded.
 
 ![quiz-area](/assets/documentation/something.png)
 
-- #### Hero image and title
+#### Hero image and title
 
 - The hero image on this webpage is very unique due to the fact that it changes to reflect the player's score throughout the quiz. This helps create an immersive experience and allows the player to visualise how far away they are from winning the game.
 
 ![Hero-image](/assets/documentation/something.png)
 
-- #### downs counter
+#### downs counter
 
 - The Downs counter is a feature which makes the game more challenging. Now if a user fails 4 questions in a row, it will trigger the game-over pop up. However, giving a correct answer will reset the down counter back to 1.
 
 ![downs-counter](/assets/documentation/something.png)
 
-- #### total yardage tracker
+#### total yardage tracker
 
 - The total yardage tracker tracks the user's overall score and displays it as "yardage" at the top of the screen. The score increases by 10 points/yards with every correct answer to further simulate a real NFL game. 
 
 ![total-yardage](/assets/documentation/something.png)
 
-- #### time left tracker
+#### time left tracker
 
 - The time left tracker displays the number of questions left before the game ends. This works in a similar way to a game clock. I chose the number of questions to be 15 as that is how many minutes per quarter in an NFL game. This also means the player can win the game even with 5 answers wrong. This feature allows them to keep track of that so they can work out how close they are to winning or losing the game.
 
 ![time-left](/assets/documentation/something.png)
 
-- #### start modal and options modal
+#### start modal and options modal
 
 - This is a key feature for the webpage as the rules of this game are not immediately obvious, especially to users unfamiliar with the structure of NFL games. For this reason I thought it would be vital that the rules are displayed both at the start when the page first loads, and are also available to be checked at any point during the game via the options menu. The options menu also has a restart button so that the player can restart the game at any point, this might be useful if they can see that there is no way for them to win their current game from where they are at.
 
 ![modals](/assets/documentation/something.png)
 
-- #### game over modal
+#### game over modal
 
 - The game over modal loads at the end of the game. This can be triggered for a number of reasons. It will load when the down counter reaches more than 4 downs, when a score of 100 has been reached, or when all the questions have been played, whichever happens first. At the moment, the pop up displays the user's score in yards and invites them to play again with a button, which reloads the page when clicked.
 
@@ -74,40 +74,42 @@ This Website is a single webpage built with HTML, CSS and Javascript. It's a nic
 
 ### Future Features
 
-- #### Updated Game-over Modal
+#### Updated Game-over Modal
 
 - In a future update, the modal should give the user tailored feedback based on their score. For example, a score of 100 could display a "touchdown" image, a score of 0 could display an "oh no" image, while other scores in between offer increasingly positive images and messages.
 
-- #### Sound effects
+#### Sound effects
 
 - Sound effects such as a cheering crowd for correct answers and a worried crowd sound for wrong answers could add more atmosphere to the game in a future update.
 
-- #### Leaderboard
+#### Leaderboard
 
 - A leaderboard for players to save scores and compare with other players would greatly improve the game.
 
-- #### Multiplayer
+ #### Multiplayer
 
 - An option to make the game multiplayer would also be a great improvement for a future update. In this version, players could play with their friends or an online opponent. Instead of the game ending completely after 4 downs, it would just end that player's turn and allow their opponent to play and move their own avatar across the field from the opposite direction.
 
-- #### more questions
+#### more questions
 
 - Finally, the number of questions could be increased. They could also be categorised into packs based on difficulty which the player could select and the order could be randomised as well.
 
 ## Design
 
--   ### Images
-- The Hero image shows
+### Images
 
-- the modal images offer feedback based on score
+- The hero image and it's alternates are the real USP of the game. As well as being manipulated by the player's progress, the image/s of a player on an american football field clearly and immediately demonstrate what the game is all about to a new user. 
 
--   ### Colour Scheme
--  The colour scheme was taken from the colours of the NFL logo.
 
--   ### Typography
+### Colour Scheme
+
+-  The colour scheme was taken directly from the colours of the NFL logo. This is another small way of making the game more immersive and keeping the theme consistent.
+
+### Typography
+
 - The majority of the font for the website is white in colour, as this improves accessibility with the chosen background colours. Google Fonts were used to import Jaro and Archivo fonts into the project. These were chosen as they are clear and easy to read.
 
--   ### Wireframes
+### Wireframes
 
 - #### Game Wireframes
 
@@ -128,7 +130,7 @@ This Website is a single webpage built with HTML, CSS and Javascript. It's a nic
 
 ### Frameworks, Libraries & Programs Used
 
--   [Google Fonts:](https://fonts.google.com) was used to import the 'Permanent marker' and 'East Sea Dotko' fonts into the style.css file which are used on all pages of the project.
+-   [Google Fonts:](https://fonts.google.com) was used to import the 'Archivo' and 'Jaro' fonts into the style.css file which are used on all pages of the project.
 -   [Font Awesome:](https://fontawesome.com) was used to add icons for aesthetic and UX purposes.
 -   [Git:](https://git-scm.com) was used for version control by utilising the Gitpod terminal to commit to Git and Push to GitHub.
 -   [GitHub:](https://github.com) is used as the respository for the projects code after being pushed from Git.
@@ -158,10 +160,18 @@ This Website is a single webpage built with HTML, CSS and Javascript. It's a nic
 
 ### Browser Compatibility
 
-- Testing has been carried out on the following browsers :
+#### Testing has been carried out on the following web browsers :
 - Chrome
 - Firefox
 - Edge
+- Safari
+
+### device testing
+
+#### Testing has been carried out by testers on the following devices
+
+- Iphone 14 mini
+- Moto G53 5G
 
 ### Known Bugs
 
