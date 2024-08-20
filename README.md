@@ -142,20 +142,15 @@ This Website is a single webpage built with HTML, CSS and Javascript. It's a nic
 
 ### Validator Testing
 
-- [HTML Validator](https://validator.w3.org)
+#### [HTML Validator](https://validator.w3.org)
 
 - results for index.html
-![HTML results for Game](/assets/documentation/something.png)
+![HTML-results-for-Game](/assets/documentation/nflhtmlval.png)
 
-- [CSS Validator](https://jigsaw.w3.org/css-validator/)
+#### [CSS Validator](https://jigsaw.w3.org/css-validator/)
 
 - result for style.css
-![CSS results for Game](/assets/documentation/something.png)
-
-- [JavaScript Validator](https://jshint.com/)
-
-- result for script.js
-![Javascript results for game](/assets/documentation/something.png)
+![CSS-results-for-Game](/assets/documentation/nflcssval.png)
 
 
 ### Browser Compatibility
@@ -185,9 +180,9 @@ This Website is a single webpage built with HTML, CSS and Javascript. It's a nic
 
 ### Responsive design
 
-- testing and editing in progress
+- Although not perfectly aesthetic, the game is functional with all features visible across all devices.
 
-![something](/assets/documentation/something.png)
+![Responsive-design](/assets/documentation/responsivetest4.png)
 
 
 ## Deployment
@@ -224,6 +219,8 @@ This Website is a single webpage built with HTML, CSS and Javascript. It's a nic
 * The fonts used were imported from [Google Fonts](https://fonts.google.com/)
 
 * Image of the football field in the hero image came from [Canva](https://canva.com/en_gb/)
+
+* The player avatar was created using [Bitmoji](https://www.bitmoji.com/)
 
 ### Additional content
 
