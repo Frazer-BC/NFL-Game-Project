@@ -82,6 +82,9 @@ This Website is a single webpage built with HTML, CSS and Javascript. It's a nic
 
 - In a future update, the modal should give the user tailored feedback based on their score. For example, a score of 100 could display a "touchdown" image, a score of 0 could display an "oh no" image, while other scores in between offer increasingly positive images and messages.
 
+![Touchdown](/assets/documentation/sacked2.png)
+![sacked](/assets/documentation/td2.png)
+
 #### Sound effects
 
 - Sound effects such as a cheering crowd for correct answers and a worried crowd sound for wrong answers could add more atmosphere to the game in a future update.
