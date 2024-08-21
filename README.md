@@ -2,6 +2,8 @@
 
 This Website is a single webpage built with HTML, CSS and Javascript. It's a niche interest quiz-based game designed for NFL fans as the primary target audience, although anybody can try it. The rules of the game are similar to American football, mainly in that the player has 4 chances to increase their score before it's game-over, and like in a real NFL game, these chances are called downs. When the player gets a question right, the avatar advances 10 yards up the field and 10 points/yards are added to the score/total yardage, and the downs reset to 1st down. This visual representation of a real NFL game being powered by the player's progress in the quiz below creates an immersive user experience.
 
+![Screenshot-of-game](assets/documentation/fullscreenshot.png)
+
 ## Table of Contents
 * [User Experience (UX)](#user-experience-ux)
 * [Features](#features)
@@ -34,43 +36,45 @@ This Website is a single webpage built with HTML, CSS and Javascript. It's a nic
 
 - The quiz area is the primary user interface on the webpage. The features at the top reflect changes the user makes, but this section is where the user will interact with the game directly by inputting their answers. There are 15 questions in total, although if the player is knowlegeable or lucky, they may win the game with just 10 questions. There are 4 answer buttons which react when hovered over by the user, and will turn green if the correct answer is selected, or red if a wrong answer is selected. The user will have time to see these effects before the next question is loaded.
 
-![quiz-area](/assets/documentation/something.png)
+![quiz-area](/assets/documentation/quizareafeature.png)
 
 #### Hero image and title
 
 - The hero image on this webpage is very unique due to the fact that it changes to reflect the player's score throughout the quiz. This helps create an immersive experience and allows the player to visualise how far away they are from winning the game.
 
-![Hero-image](/assets/documentation/something.png)
+![Hero-image](/assets/documentation/heroimagefeature.png)
 
 #### downs counter
 
 - The Downs counter is a feature which makes the game more challenging. Now if a user fails 4 questions in a row, it will trigger the game-over pop up. However, giving a correct answer will reset the down counter back to 1.
 
-![downs-counter](/assets/documentation/something.png)
+![downs-counter](/assets/documentation/downsfeature.png)
 
 #### total yardage tracker
 
 - The total yardage tracker tracks the user's overall score and displays it as "yardage" at the top of the screen. The score increases by 10 points/yards with every correct answer to further simulate a real NFL game. 
 
-![total-yardage](/assets/documentation/something.png)
+![total-yardage](/assets/documentation/yardagefeature.png)
 
 #### time left tracker
 
 - The time left tracker displays the number of questions left before the game ends. This works in a similar way to a game clock. I chose the number of questions to be 15 as that is how many minutes per quarter in an NFL game. This also means the player can win the game even with 5 answers wrong. This feature allows them to keep track of that so they can work out how close they are to winning or losing the game.
 
-![time-left](/assets/documentation/something.png)
+![time-left](/assets/documentation/timeleftfeature.png)
 
 #### start modal and options modal
 
 - This is a key feature for the webpage as the rules of this game are not immediately obvious, especially to users unfamiliar with the structure of NFL games. For this reason I thought it would be vital that the rules are displayed both at the start when the page first loads, and are also available to be checked at any point during the game via the options menu. The options menu also has a restart button so that the player can restart the game at any point, this might be useful if they can see that there is no way for them to win their current game from where they are at.
 
-![modals](/assets/documentation/something.png)
+![Start-game](/assets/documentation/startgamefeature.png)
+![options-menu](/assets/documentation/optionsfeature.png)
+![check-rules](/assets/documentation/checkrulesfeature.png)
 
 #### game over modal
 
 - The game over modal loads at the end of the game. This can be triggered for a number of reasons. It will load when the down counter reaches more than 4 downs, when a score of 100 has been reached, or when all the questions have been played, whichever happens first. At the moment, the pop up displays the user's score in yards and invites them to play again with a button, which reloads the page when clicked.
 
-![game-over](/assets/documentation/something.png)
+![game-over](/assets/documentation/gameoverfeature.png)
 
 ### Future Features
 
@@ -113,11 +117,9 @@ This Website is a single webpage built with HTML, CSS and Javascript. It's a nic
 
 - #### Game Wireframes
 
-![Game](/assets/documentation/something.png)
+![desktop](/assets/documentation/desktopwireframe2.png)
 
-- #### modal Wireframes
-
-![modal](/assets/documentation/something.png)
+![mobile](/assets/documentation/mobile2.png)
 
 
 ## Technologies Used
@@ -170,13 +172,15 @@ This Website is a single webpage built with HTML, CSS and Javascript. It's a nic
 
 ### Known Bugs
 
-- Check rules bug
+#### Check rules bug
 
-![something](/assets/documentation/something.png)
+- initially there was a bug which occured when checking the rules of the game via the options menu. If the player wanted to check the rules more than once the game would seem to freeze as the modal would no longer work. This was caused by the modal being hidden rather than removed. this was fixed by replacing one line of javascript in the function.
 
-- Downs suffix bug
 
-![something](/assets/documentation/something.png)
+#### Downs suffix bug
+
+-initially there was a bug which occured when the player got questions wrong. The down counter would display the wrong suffix, e.g. 1nd 2rd 3th and 4undefined. This was caused because the suffix was determined by an array and the indices begin at 0, so with that in mind, the bug was quickly resolved by changing the order.
+
 
 ### Responsive design
 
